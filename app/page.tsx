@@ -1,113 +1,82 @@
-import Image from 'next/image'
+import Link from "next/link";
 
-export default function Home() {
+export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+    <section>
+      <br />
+      <h1 className="text-center text-4xl font-medium mt-8 mb-4">Sikorska Notary Blog</h1>
+      <br />
+      <p className="my-4">
+        Hello and welcome to Sikorska Notary Blog, where I share my insights and tips on various
+        notarial matters. My name is Patrycja Sikorska and I am a mobile notary in Bristol and the
+        South West of England.
+      </p>
+      <p className="my-4">
+        As a notary, my main function is to certify the authenticity of documents, signatures and
+        identities for use in foreign countries. I also advise clients on the formalities and
+        requirements of different legal systems and jurisdictions. I deal with both individual and
+        corporate clients, and each case is different and treated individually.
+      </p>
+
+      <p className="my-4">
+        In this blog, I will share with you some of the typical stages of notarial activities, the
+        documents and evidence required for different types of transactions, the fees and
+        disbursements involved, and the legalisation process for different countries. I will also
+        answer some of the frequently asked questions and common misconceptions about notaries and
+        their role. I hope you will find this blog informative and helpful, and if you have any
+        questions or comments, please feel free to contact me.
+      </p>
+      <br />
+      <h2 className="text-center text-2xl">Choose language</h2>
+      <br />
+      <div className="flex justify-center gap-8">
+        <Link href="/blog/pl">
+          <svg
+            className="cursor-pointer"
+            width={100}
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512">
+            <path fill="#f0f0f0" d="M0 85.337h512v341.326H0z" />
+            <path fill="#f0f0f0" d="M0 85.337h512V256H0z" />
+            <path fill="#d80027" d="M0 256h512v170.663H0z" />
+          </svg>
+        </Link>
+        <Link href="/blog/eng">
+          <svg
+            className="cursor-pointer"
+            width={100}
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512">
+            <path fill="#f0f0f0" d="M0 85.333h512V426.67H0z" />
+            <path
+              fill="#d80027"
+              d="M288 85.33h-64v138.666H0v64h224v138.666h64V287.996h224v-64H288z"
             />
-          </a>
-        </div>
+            <path
+              fill="#0052b4"
+              d="M393.785 315.358 512 381.034v-65.676zM311.652 315.358 512 426.662v-31.474l-143.693-79.83zM458.634 426.662l-146.982-81.664v81.664z"
+            />
+            <path fill="#f0f0f0" d="M311.652 315.358 512 426.662v-31.474l-143.693-79.83z" />
+            <path fill="#d80027" d="M311.652 315.358 512 426.662v-31.474l-143.693-79.83z" />
+            <path
+              fill="#0052b4"
+              d="M90.341 315.356 0 365.546v-50.19zM200.348 329.51v97.151H25.491z"
+            />
+            <path fill="#d80027" d="M143.693 315.358 0 395.188v31.474l200.348-111.304z" />
+            <path
+              fill="#0052b4"
+              d="M118.215 196.634 0 130.958v65.676zM200.348 196.634 0 85.33v31.474l143.693 79.83zM53.366 85.33l146.982 81.664V85.33z"
+            />
+            <path fill="#f0f0f0" d="M200.348 196.634 0 85.33v31.474l143.693 79.83z" />
+            <path fill="#d80027" d="M200.348 196.634 0 85.33v31.474l143.693 79.83z" />
+            <path
+              fill="#0052b4"
+              d="M421.659 196.636 512 146.446v50.19zM311.652 182.482V85.331h174.857z"
+            />
+            <path fill="#d80027" d="M368.307 196.634 512 116.804V85.33L311.652 196.634z" />
+          </svg>
+        </Link>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </section>
+  );
 }
