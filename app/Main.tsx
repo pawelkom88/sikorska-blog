@@ -24,11 +24,13 @@ export default function Home({posts}) {
         {renderHeader(isEnglish)}
         <ul className="divide-y divide-gray-200">
           {!filteredPosts.length && "No posts found."}
-          {filteredPosts.slice(0, MAX_DISPLAY).map(post => (
-            <li key={post.slug} className="py-12">
-              {renderPostItem(post, isEnglish)}
-            </li>
-          ))}
+          {filteredPosts.slice(0, MAX_DISPLAY).map(post => {
+            return (
+              <li key={post.slug} className="py-12">
+                {renderPostItem(post, isEnglish)}
+              </li>
+            );
+          })}
         </ul>
       </div>
       {renderAllPostsLink(posts.length, isEnglish)}
@@ -47,7 +49,7 @@ function renderHeader(isEnglish: boolean) {
   );
 }
 
-function renderPostItem(post, isEnglish) {
+function renderPostItem(post, isEnglish: boolean) {
   const {slug, date, title, summary} = post;
 
   const formattedDate = new Date(date).toLocaleDateString(
@@ -64,16 +66,16 @@ function renderPostItem(post, isEnglish) {
             <time dateTime={date}>{formattedDate}</time>
           </dd>
         </dl>
-        <div className="space-y-5 xl:col-span-3 text-left">
+        <div className="space-y-5 xl:col-span-3 xl:text-left">
           <div className="space-y-6">
-            <h2 className="text-4xl text-center lg:text-5xl mt-6 lg:mt-0 font-bold leading-8 tracking-tight">
+            <h2 className="text-4xl text-left lg:text-5xl mt-6 lg:mt-0 font-bold leading-8 tracking-tight">
               <Link
                 href={`${isEnglish ? "/blog/eng" : "/blog/pl"}/${slug}`}
                 className="text-gray-900">
                 {title}
               </Link>
             </h2>
-            <div className="text-justify max-w-none text-gray-600">{summary}</div>
+            <div className="text-justify text-gray-600">{summary}</div>
           </div>
           <div className="text-base font-medium leading-6">
             <Link

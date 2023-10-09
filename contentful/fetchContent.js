@@ -2,6 +2,7 @@ import contentfulClient from "./contentfulClient";
 import {parseContentfulContentImage} from "./contentImage";
 
 export function parseContentfulArticle(article) {
+
   if (!article) {
     return null;
   }
@@ -10,7 +11,7 @@ export function parseContentfulArticle(article) {
     slug: article.fields.slug,
     summary: article.fields.summary || "",
     content: article.fields.content || "",
-    date: article.fields.date || null,
+    date: article.fields.publishedDate || null,
     isEnglish: article.fields.isEnglish || false,
     image: parseContentfulContentImage(article.fields.image) || null,
   };
