@@ -6,19 +6,19 @@ export default function Page() {
       <br />
       <h1 className="text-center text-4xl font-medium mt-8 mb-4">Sikorska Notary Blog</h1>
       <br />
-      <p className="my-4">
+      <p className="my-4 text-justify">
         Hello and welcome to Sikorska Notary Blog, where I share my insights and tips on various
         notarial matters. My name is Patrycja Sikorska and I am a mobile notary in Bristol and the
         South West of England.
       </p>
-      <p className="my-4">
+      <p className="my-4 text-justify">
         As a notary, my main function is to certify the authenticity of documents, signatures and
         identities for use in foreign countries. I also advise clients on the formalities and
         requirements of different legal systems and jurisdictions. I deal with both individual and
         corporate clients, and each case is different and treated individually.
       </p>
 
-      <p className="my-4">
+      <p className="my-4 text-justify">
         In this blog, I will share with you some of the typical stages of notarial activities, the
         documents and evidence required for different types of transactions, the fees and
         disbursements involved, and the legalisation process for different countries. I will also

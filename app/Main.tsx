@@ -57,7 +57,7 @@ function renderPostItem(post, isEnglish) {
 
   return (
     <article>
-      <div className="space-y-2 space-x-16 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+      <div className="space-y-2 xl:space-x-16 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
         <dl>
           <dt className="sr-only">{isEnglish ? "Published on" : "Data publikacji"}</dt>
           <dd className="text-base font-medium leading-6 text-gray-400">
@@ -66,14 +66,14 @@ function renderPostItem(post, isEnglish) {
         </dl>
         <div className="space-y-5 xl:col-span-3 text-left">
           <div className="space-y-6">
-            <h2 className="text-4xl lg:text-5xl mt-6 lg:mt-0 font-bold leading-8 tracking-tight">
+            <h2 className="text-4xl text-center lg:text-5xl mt-6 lg:mt-0 font-bold leading-8 tracking-tight">
               <Link
                 href={`${isEnglish ? "/blog/eng" : "/blog/pl"}/${slug}`}
                 className="text-gray-900">
                 {title}
               </Link>
             </h2>
-            <div className="prose max-w-none text-gray-600">{summary}</div>
+            <div className="text-justify max-w-none text-gray-600">{summary}</div>
           </div>
           <div className="text-base font-medium leading-6">
             <Link

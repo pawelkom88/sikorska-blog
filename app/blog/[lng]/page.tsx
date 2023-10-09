@@ -12,7 +12,7 @@ export default async function Page() {
   );
 
   return (
-    <div className="mt-24 text-center">
+    <div className="mt-8 text-center">
       <Main posts={articles} />
     </div>
   );

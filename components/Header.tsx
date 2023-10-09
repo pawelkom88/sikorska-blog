@@ -6,7 +6,7 @@ import headerNavLinks from "@/data/headerNavLinks";
 
 const Header = () => {
   return (
-    <header className="w-full flex items-center flex-col justify-center py-8 bg-[#11371f]">
+    <header className="w-full flex items-center flex-col justify-center py-2 lg:py-8 bg-[#11371f]">
       <Link href="/" aria-label={siteMetadata.headerTitle}>
         <Image
           className="mx-auto mb-2"
